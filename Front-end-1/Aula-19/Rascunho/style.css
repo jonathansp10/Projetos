@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@keyframes animation-background-body {
+
+    0%{
+        background-color: black;
+    }
+
+    50%{
+        background-color: blue;
+    }
+
+    100%{
+        background-color: aqua;
+    }
+    
+}
+body{
+    background-color: white;
+} 
+
+@keyframes animation-header{
+    0%{
+        opacity: 0;
+
+    }
+
+    100% {
+        top:0px;
+        opacity: 100;
+    }
+}
+
+
+header{
+    height: 100px;
+    background-color: black;
+    position: relative;
+    opacity: 100;
+    animation-name: animation-header;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+ul{
+    color: white;
+    display: flex;
+    text-decoration: none;
+    margin: 15px;
+        
+}

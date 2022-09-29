@@ -1,0 +1,102 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+.cabecalho{
+    position: absolute;
+    width: 100%;
+    height: 38px;
+    box-sizing: border-box;
+    background: #1CD1B0;
+}
+
+.cabecalho .titulo{
+    position: absolute;
+    width: 1024px;
+    height: 38px;
+    
+}
+
+.cabecalho div{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #00669F;
+    
+    
+}
+
+.cabecalho h1{
+    position: relative;
+    font-weight: 400px;
+    font-size: 40px;
+    line-height: 47px;
+    
+}
+.main-site-content {
+
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 12px;
+    min-height: 100vh;
+    padding: 80px;
+}
+
+.hero-card {
+    height: fit-content;
+    width: 400px;
+    background-color: rgb(122, 65, 65);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    color: aliceblue;
+
+}
+
+.hero-card .favorite-icon {
+
+    width: 24px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+}
+
+.hero-card .background-image {
+
+    width: 100%;
+
+}
+
+.hero-card .profile-image {
+
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin: -40px auto;
+
+}
+.hero-card h1 {
+    margin: 0 40px; 
+    position: relative;
+}
+.hero-card p {
+
+    margin: 0 40px; 
+    position: relative;
+
+}
+
+footer {
+
+    background-color: aquamarine;
+    height: 15px;
+
+}
+
