@@ -1,5 +1,5 @@
-let opcao = 2;
-let tempo = 0
+let opcao = 1;
+let tempo = 30;
 
  if (opcao == 1) {
     tempopadrao = 10;    
@@ -16,9 +16,8 @@ let tempo = 0
 else if (opcao ==5){
    tempopadrao = 8;
 }
- else {
-    console.log(`Prato Inexistente!!`);
-    bPrato = 1;
+else if(opcao > 5){
+   console.log(`Prato Inexistente!!`);
  }
 
  
@@ -27,31 +26,24 @@ else if (opcao ==5){
 
 
     let tempo3 = (tempopadrao * 3);
-    let tempo2 = (tempopadrao * 2);  
-    
-    // console.log('Tempo multiplicado por 3 ' + tempo3);
-    // console.log('Tempo multiplicado por 2 ' + tempo2);
-    // console.log('Tempo ' + ftempo);
-    // console.log('Tempo padrao ' + tempopadrao);
- 
- 
+    let tempo2 = (tempopadrao * 2);   
  
     if ( (tempo) < (tempopadrao)) {
        console.log('Tempo insuficiente');
     }   
  
-    else if ((ftempo => tempopadrao) && (ftempo < tempo2)) {
+    else if ((tempo => tempopadrao) && (tempo < tempo2)) {
        console.log('Prato pronto, bom apetite!!!');
     }
  
-    else if ((ftempo) >= (tempo2) && (ftempo < tempo3)) {
+    else if ((tempo) >= (tempo2) && (tempo < tempo3)) {
        console.log('A comida queimou')
     }
  
-    else if ( (ftempo) >= (tempo3)) {    
+    else if ( (tempo) >= (tempo3)) {    
  
        console.log('Kabum')
-    } 
+    }
    
  }
- console.log(preparaprato());
+console.log(preparaprato());
