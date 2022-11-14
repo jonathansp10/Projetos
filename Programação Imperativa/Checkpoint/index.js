@@ -1,6 +1,5 @@
-let tempopadrao = 10;
-let bPrato = 0;
 let opcao = 2;
+let tempo = 0
 
  if (opcao == 1) {
     tempopadrao = 10;    
@@ -24,20 +23,20 @@ else if (opcao ==5){
 
  
 
- function preparaprato( ftempo, tempopadrao){
+ function preparaprato( ftempo){
 
 
     let tempo3 = (tempopadrao * 3);
     let tempo2 = (tempopadrao * 2);  
     
-    console.log('Tempo multiplicado por 3 ' + tempo3);
-    console.log('Tempo multiplicado por 2 ' + tempo2);
-    console.log('Tempo ' + ftempo);
-    console.log('Tempo padrao ' + tempopadrao);
+    // console.log('Tempo multiplicado por 3 ' + tempo3);
+    // console.log('Tempo multiplicado por 2 ' + tempo2);
+    // console.log('Tempo ' + ftempo);
+    // console.log('Tempo padrao ' + tempopadrao);
  
  
  
-    if ( (ftempo) < (tempopadrao)) {
+    if ( (tempo) < (tempopadrao)) {
        console.log('Tempo insuficiente');
     }   
  
@@ -55,3 +54,4 @@ else if (opcao ==5){
     } 
    
  }
+ console.log(preparaprato());
