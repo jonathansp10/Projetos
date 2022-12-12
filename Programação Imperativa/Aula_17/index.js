@@ -18,7 +18,7 @@ const banco = {
     consultarCliente(contaABuscar){
         for(let cliente of this.clientes){
             if(contaABuscar == cliente.conta){
-                return cliente
+                return cliente;
             }
         }
     }
