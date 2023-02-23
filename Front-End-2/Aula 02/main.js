@@ -1,63 +1,94 @@
-var usuarioDesejaJogar = confirm('Você quer jogar?')
+function verificarGanhador(usuario, oponente) {
+   let pontoUsuario = 0
+   let pontoOponete = 0
+   
 
-function comecarJogo() {
-    
-    let jogadaUsuario = Number(prompt('O que você deseja jogar? 1 = Pedra, 2 = Papel, 3 = tesoura'))
-    let jogadaOponente = Math.floor(Math.random() * 3 ) + 1;
-    console.log(jogadaUsuario)
-    console.log(jogadaOponente)
-
-    if ( jogadaUsuario === 1 && jogadaOponente === 2 ){
+        if ( usuario === 1 && oponente === 2 ){
 
         console.log('Você perdeu!')
-    }
-
-    if ( jogadaUsuario === 3 && jogadaOponente === 1 ){
-
+        pontoOponete++
+        }
+    
+        if ( usuario === 3 && oponente === 1 ){
+    
         console.log('Você perdeu!')
-    }
-
-    if ( jogadaUsuario === 2 && jogadaOponente === 3 ){
-
+        pontoOponete++
+        }
+    
+        if ( usuario === 2 && oponente === 3 ){
+    
         console.log('Você perdeu!')
-    }
-
-    if ( jogadaUsuario === 2 && jogadaOponente === 1 ){
-
-        console.log('Você ganhou!')
-    }
+        pontoOponete++
+        }
     
-    if ( jogadaUsuario === 1 && jogadaOponente === 3 ){
+        if ( usuario === 2 && oponente === 1 ){
     
         console.log('Você ganhou!')
-    }
+        pontoUsuario++
+        }
     
-    if ( jogadaUsuario === 3 && jogadaOponente === 2 ){
+        if ( usuario === 1 && oponente === 3 ){
     
         console.log('Você ganhou!')
-    }
-
-    if ( jogadaUsuario === 3 && jogadaOponente === 3 ){
+        pontoUsuario++
+        }
+    
+        if ( usuario === 3 && oponente === 2 ){
+    
+        console.log('Você ganhou!')
+        pontoUsuario++
+        }
+    
+        if ( usuario === 3 && oponente === 3 ){
     
         console.log('Empate!')
-    }
-
-    if ( jogadaUsuario === 2 && jogadaOponente === 2 ){
+        }
+    
+        if ( usuario === 2 && oponente === 2 ){
     
         console.log('Empate!')
-    }
-
-    if ( jogadaUsuario === 1 && jogadaOponente === 1 ){
+        }
+    
+        if ( usuario === 1 && oponente === 1 ){
     
         console.log('Empate!')
-    }
+        }
+     
 }
+    
+ 
+  
+  function comecarJogo() {
+    do{
+    let usuario = Number(prompt('O que voce deseja jogar? 1 = pedra, 2 = papel, 3 = tesoura'));
+    let oponente = Math.floor(Math.random() * 3) + 1;
+    
+    verificarGanhador(usuario, oponente);
+    } while (pontoUsuario < 2 && pontoOponete < 2)
+    } 
 
-
-if (usuarioDesejaJogar === true) {
-
-    comecarJogo()
-
-} else{
-    alert('Obrigado por nos visitar')
-}
+    // console.log(usuario);
+    // console.log(jogadaComputador);
+  
+    // verificarGanhador(jogadaUsuario, jogadaComputador);
+  
+  
+  function perguntarDesejaJogar() {
+  
+    let usuarioDesejaJogar = confirm('Você gostaria de jogar?');
+    
+    
+  
+    if (usuarioDesejaJogar === true) {
+  
+      comecarJogo();
+  
+    } else {
+  
+      alert('Obrigado por visitar a pagina');
+  
+    }
+  
+  }
+  
+  perguntarDesejaJogar();
