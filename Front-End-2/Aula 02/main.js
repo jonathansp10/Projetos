@@ -1,7 +1,4 @@
 function verificarGanhador(usuario, oponente) {
-   let pontoUsuario = 0
-   let pontoOponete = 0
-   
 
         if ( usuario === 1 && oponente === 2 ){
 
@@ -53,8 +50,13 @@ function verificarGanhador(usuario, oponente) {
     
         console.log('Empate!')
         }
-     
-}
+      
+        console.log(pontoUsuario)
+        console.log(pontoOponete)
+
+        
+      } 
+
     
  
   
@@ -64,7 +66,14 @@ function verificarGanhador(usuario, oponente) {
     let oponente = Math.floor(Math.random() * 3) + 1;
     
     verificarGanhador(usuario, oponente);
-    } while (pontoUsuario < 2 && pontoOponete < 2)
+    } while (pontoUsuario >= 2 && pontoOponete >= 2){
+        if ( pontoUsuario === 2){
+          alert('Você ganhou');
+        } else if (pontoOponete === 2) {
+          alert('Você perdeu');
+        }
+       }
+      
     } 
 
     // console.log(usuario);
