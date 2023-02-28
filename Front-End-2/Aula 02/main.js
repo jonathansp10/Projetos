@@ -56,23 +56,13 @@ function verificarGanhador(usuario, oponente) {
 
         
       } 
-
-    
- 
   
-  function comecarJogo() {
-    do{
+   function comecarJogo() {
+    
     let usuario = Number(prompt('O que voce deseja jogar? 1 = pedra, 2 = papel, 3 = tesoura'));
     let oponente = Math.floor(Math.random() * 3) + 1;
     
     verificarGanhador(usuario, oponente);
-    } while (pontoUsuario >= 2 && pontoOponete >= 2){
-        if ( pontoUsuario === 2){
-          alert('Você ganhou');
-        } else if (pontoOponete === 2) {
-          alert('Você perdeu');
-        }
-       }
       
     } 
 
