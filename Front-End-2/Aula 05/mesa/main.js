@@ -9,3 +9,4 @@ function lightMode() {
     element.className = "light";
     content.innerText = "Dark Mode is OFF";
   }
+  
