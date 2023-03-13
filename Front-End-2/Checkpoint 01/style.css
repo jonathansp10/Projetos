@@ -57,22 +57,23 @@ button:hover {
 
 section{
     margin: 0 auto;
+    width: 50%;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
 .card{
-    display: inline-block;
     margin: 20px;
-    width: 300px;
+    width: 200px;
     background-color: aliceblue;
     border-radius: 20px;
-    font-family: 'Nunito', sans-serif;
     padding: 10px;
 }
 
 .card .image {
     width: 100%;
     height: auto;
-    
 }
 
 p{
