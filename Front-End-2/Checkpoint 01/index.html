@@ -14,16 +14,18 @@
             <h1>Criação de Personagem</h1>
 
             <div>
-                <input class="error" type="text" id="personagem" placeholder="Nome do Personagem" required>
+                <input type="text" id="personagem" placeholder="Nome do Personagem" required minlength="9">
                 <small>Digite o nome do personagem</small>
             </div>
 
             <div>
                 <input type="url" id="link" placeholder="URL" required>
+                <small>Digite ou cole o link da imegem</small>
             </div>
             
             <div>
-                <input class="descricao" id="descricao" type="text" placeholder="Descrição" required>
+                <input id="descricao" type="text" placeholder="Descrição" required minlength="9">
+                <small>Digite a descrição do personagem</small>
             </div>
 
             <button> Carregar </button>
