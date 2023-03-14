@@ -19,6 +19,7 @@ form{
     border-radius: 20px;
 }
 
+
 input{
     display: flex;
     flex-direction: column;
@@ -32,7 +33,7 @@ input{
     justify-content: center;
 }
 
-.descricao{
+#descricao{
     
     height: 100px;
     color: rgb(0, 0, 0);
@@ -43,13 +44,17 @@ input{
     color: black;
 }
 
-div input .error{
-    color: #ad2831;
+.error input{
+    background-color: #ad2831;
 }
 small{
     display: none;
 }
 
+.error small{
+    display: flex;
+    color: #ad2831;
+}
 
 
 button{ 
@@ -57,7 +62,7 @@ button{
     color:black;
     display: block;
     padding: 5px;
-    margin: auto 87%;
+    margin: auto 90%;
     border-radius: 8px;
 }
 
