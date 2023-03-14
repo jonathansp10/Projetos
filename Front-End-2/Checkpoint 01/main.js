@@ -1,5 +1,7 @@
 let contentRef = document.querySelector('.container')
-const inputRef = document.querySelector('#personagem')
+const personagemRef = document.querySelector('#personagem')
+const urlRef = document.querySelector('#link')
+const descricaoRef = document.querySelector('#descricao')
 
 const feeds = [
     {
@@ -49,21 +51,30 @@ for (let feed of feeds){
 }
 console.log(feeds)
 
+var formErros= {
+    personagem: true,
+    link: true,
+    descricao: true
+}
+
 function validateInput(inputRef) {
 
     const inputValid = inputRef.checkValidity()
-    const div = inputRef.parentElement
+    const form = inputRef.parentElement
 
     if(inputValid) {
         
-        div.classList.remove('error')
+        form.classList.remove('error')
 
     } else {
         
-        div.classList.add('error')
+        form.classList.add('error')
     }
+    formErrors[inputRef.id] = !inputValid
+    
+    checkFormValidity()
 
 }
-inputRef.addEventListener('keyup', () => validateInput(inputRef))
-
-
+personagemRef.addEventListener('keyup', () => validateInput(personagemRef))
+urlRef.addEventListener('keyup', () => validateInput(urlRef))
+descricaoRef.addEventListener('keyup', () => validateInput(descricaoRef))
