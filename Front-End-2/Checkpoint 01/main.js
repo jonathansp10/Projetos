@@ -2,32 +2,19 @@ let contentRef = document.querySelector('.container')
 const personagemRef = document.querySelector('#personagem')
 const urlRef = document.querySelector('#link')
 const descricaoRef = document.querySelector('#descricao')
-
-
-// const feeds = [
-//     {
-//         imagem: urlRef.value,
-//         titulo: personagemRef.value,
-//         texto: descricaoRef.value 
-//     }
-// ]
-
-// for (let feed of feeds){
-//     contentRef.innerHTML += `
-      
-//     <div class="card">
-//         <img class="image" src="${urlRef.value}">
-//         <h3>${personagemRef.value}</h3>
-//         <p>${descricaoRef.value}</p>
-//     </div>
-//     `
-// }
-// console.log(feeds)
+const buttonRef = document.querySelector('#load')
 
 var formErros= {
     personagem: true,
     link: true,
     descricao: true
+}
+
+function checkFormValidity(){
+    
+    const formErrorsArray = Object.values(formErros)
+    const formValidity = formErrorsArray.every(item => item === false)
+    buttonRef.disabled =!formValidity
 }
 
 function validateInput(inputRef) {
@@ -48,6 +35,29 @@ function validateInput(inputRef) {
     checkFormValidity()
 
 }
+function load(event){
+    event.preventDefault()
+
+    const personagem = {
+        imagem: urlRef.value,
+        titulo: personagemRef.value,
+        texto: descricaoRef.value 
+    }
+
+    // console.log(contentRef)
+
+        contentRef.innerHTML += `
+
+        <div class="card">
+        <img class="image" src="${personagem.imagem}">
+        <h3>${personagem.titulo}</h3>
+        <p>${personagem.texto}</p>
+        </div>
+        `
+
+}
+
 personagemRef.addEventListener('keyup', () => validateInput(personagemRef))
 urlRef.addEventListener('keyup', () => validateInput(urlRef))
 descricaoRef.addEventListener('keyup', () => validateInput(descricaoRef))
+buttonRef.addEventListener('click', (event) => load(event))
