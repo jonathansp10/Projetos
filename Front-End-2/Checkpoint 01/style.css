@@ -6,7 +6,7 @@
 
 body{
     background-color: black;
-    color: brown;
+    color: white;
 }
 
 form{
@@ -14,25 +14,27 @@ form{
     width: 50%;
     gap: 20px;
     margin: 50px auto;
-    background-color: rgb(171, 181, 189);
+    background-color: rgb(113, 115, 116);
     padding: 5px ;
+    border-radius: 20px;
 }
 
 input{
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid #ad2831;
     padding: 5px;
     background-color: rgb(138, 136, 136);
     color: black;
-    margin: 5px;
-    height: 25px;
+    margin: 5px auto;
+    height: 30px;
     width: 100%;
+    border-radius: 20px;
+    justify-content: center;
 }
 
 .descricao{
     
-    height: 50px;
+    height: 100px;
     color: rgb(0, 0, 0);
 
 }
@@ -41,12 +43,21 @@ input{
     color: black;
 }
 
+div input .error{
+    color: #ad2831;
+}
+small{
+    display: none;
+}
+
+
+
 button{ 
     background-color: #ad2831;
     color:black;
     display: block;
     padding: 5px;
-    margin: auto 90%;
+    margin: auto 87%;
     border-radius: 8px;
 }
 
@@ -55,7 +66,7 @@ button:hover {
     color: #ad2831;
   }
 
-section{
+.container {
     margin: 0 auto;
     width: 50%;
     display: flex;
@@ -69,6 +80,8 @@ section{
     background-color: aliceblue;
     border-radius: 20px;
     padding: 10px;
+    color: #ad2831;
+
 }
 
 .card .image {
@@ -76,7 +89,21 @@ section{
     height: auto;
 }
 
+.card h3{
+    text-align: center;
+}
+
 p{
     text-align: center;
 }
 
+@media(max-width: 500px) {
+    
+    form{
+        width: 90%;
+    }
+    button {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
