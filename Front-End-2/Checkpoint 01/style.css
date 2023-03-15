@@ -79,6 +79,10 @@ button{
     border-radius: 8px;
 }
 
+button :disabled{
+    opacity: .2;
+}
+
 .container {
     margin: 0 auto;
     width: 50%;

@@ -3,8 +3,9 @@ const personagemRef = document.querySelector('#personagem')
 const urlRef = document.querySelector('#link')
 const descricaoRef = document.querySelector('#descricao')
 const buttonRef = document.querySelector('#load')
+const personagemFormRef = document.querySelector('#personagemForm')
 
-var formErros= {
+var formErrors= {
     personagem: true,
     link: true,
     descricao: true
@@ -12,7 +13,7 @@ var formErros= {
 
 function checkFormValidity(){
     
-    const formErrorsArray = Object.values(formErros)
+    const formErrorsArray = Object.values(formErrors)
     const formValidity = formErrorsArray.every(item => item === false)
     buttonRef.disabled = !formValidity
 
@@ -63,7 +64,13 @@ function load(event){
         </div>
         `
     
-    
+
+    buttonRef.disabled = true
+    personagemFormRef.reset()
+
+    formErrors.personagem = true
+    formErrors.descricao = true
+    formErrors.link = true
 
 }
 
