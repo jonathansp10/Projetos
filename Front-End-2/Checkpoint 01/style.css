@@ -94,10 +94,12 @@ button{
     border-radius: 20px;
     padding: 10px;
     color: #ad2831;
-
+    text-align: center;
+    
 }
 
 .card .image {
+    object-fit: cover;
     width: 100%;
     height: auto;
 }
@@ -106,8 +108,13 @@ button{
     text-align: center;
 }
 
-p{
-    text-align: center;
+.card p{
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    line-height: 150%;
 }
 
 @media(max-width: 500px) {
