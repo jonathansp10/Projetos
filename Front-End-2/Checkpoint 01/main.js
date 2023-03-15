@@ -14,7 +14,9 @@ function checkFormValidity(){
     
     const formErrorsArray = Object.values(formErros)
     const formValidity = formErrorsArray.every(item => item === false)
-    buttonRef.disabled =!formValidity
+    buttonRef.disabled = !formValidity
+
+    
 }
 
 function validateInput(inputRef) {
@@ -29,13 +31,19 @@ function validateInput(inputRef) {
     } else {
         
         form.classList.add('error')
+              
     }
+    
     formErrors[inputRef.id] = !inputValid
     
+    
     checkFormValidity()
-
+    
+    
+   
 }
 function load(event){
+
     event.preventDefault()
 
     const personagem = {
@@ -54,8 +62,12 @@ function load(event){
         <p>${personagem.texto}</p>
         </div>
         `
+    
+    
 
 }
+
+
 
 personagemRef.addEventListener('keyup', () => validateInput(personagemRef))
 urlRef.addEventListener('keyup', () => validateInput(urlRef))
