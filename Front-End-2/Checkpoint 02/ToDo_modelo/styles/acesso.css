@@ -47,12 +47,24 @@ input:focus {
   border: 1px solid lightgrey;
 }
 
+.error input {
+  border-color:crimson;
+}
+
 label {
   width: 100%;
   font-weight: 300;
   margin-bottom: -.1em;
   margin-top: 1em;
   font-size: .8em;
+}
+
+small{
+  display: none;
+}
+
+.error small  {
+  color: red;
 }
 
 button {
