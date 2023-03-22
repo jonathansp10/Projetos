@@ -35,6 +35,7 @@ form:after {
 
 
 input {
+  display: flex;
   width: 100%;
   padding: .4em .5em;
   background-color: var(--app-grey);
@@ -48,15 +49,16 @@ input:focus {
 }
 
 .error input {
+  /* display: flex;
   width: 100%;
   padding: .4em .5em;
   background-color: var(--app-grey);
   border: 1px solid;
-  border-radius: .2em;
+  border-radius: .2em; */
   border-color:crimson;
 }
 
-label {
+div label {
   width: 100%;
   font-weight: 300;
   margin-bottom: -.1em;
