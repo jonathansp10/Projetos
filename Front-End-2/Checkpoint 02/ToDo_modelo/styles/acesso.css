@@ -35,12 +35,27 @@ form:after {
 
 
 input {
-  display: flex;
   width: 100%;
   padding: .4em .5em;
   background-color: var(--app-grey);
   border: 1px solid var(--app-grey);
   border-radius: .2em;
+  display: flex;
+}
+
+.error input{
+  border-color: rgba(220, 20, 60, 0.709) !important;
+  border: solid !important;
+  color: rgba(220, 20, 60, 0.709) !important;
+
+
+}
+
+.error small{
+  font-size: x-small !important;
+  font-weight: lighter !important;
+  color: rgba(220, 20, 60, 0.709) !important;
+  display: flex;
 }
 
 input:focus {
@@ -48,17 +63,7 @@ input:focus {
   border: 1px solid lightgrey;
 }
 
-.error input {
-  /* display: flex;
-  width: 100%;
-  padding: .4em .5em;
-  background-color: var(--app-grey);
-  border: 1px solid;
-  border-radius: .2em; */
-  border-color:crimson;
-}
-
-div label {
+label {
   width: 100%;
   font-weight: 300;
   margin-bottom: -.1em;
@@ -66,14 +71,8 @@ div label {
   font-size: .8em;
 }
 
-small{
+small {
   display: none;
-}
-
-.error small  {
-  display: flex;
-  color: red;
-  font-size: x-small;
 }
 
 button {
@@ -83,6 +82,12 @@ button {
   margin-top: 2em;
   font-weight: 400;
   font-size: 1em;
+  display: flex;
+}
+
+:disabled{
+    opacity: .2;
+    display: flex;
 }
 
 .form-header {

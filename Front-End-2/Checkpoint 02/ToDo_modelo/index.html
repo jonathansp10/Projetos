@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do App</title>
-
   <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
   <link rel="stylesheet" href="styles/acesso.css">
-
   
+  
+
+
 </head>
 
 <body>
@@ -19,25 +20,31 @@
   </div>
 
   <div class="right">
-    <form> 
+    <form>
       <div class="form-header">
         <p>To-Do App</p>
       </div>
       <h1>Acessar</h1>
 
-      <div>      
-        <label> Email: </label>
-        <input id="inputEmail" type="email" required>
-        <small>Preencha o campo E-mail corretamente</small>
-      </div>
+      <div class="">
+        <label> Email:</label>
+        <input id="inputEmail" type="email" minlength="6" required>
+        <small>Preencha o campo E-mail corretamente.</small>
 
-      <div>
-       <label> Senha: </label>
-        <input id="inputPassword" type="password" required minlength="8">
-        <small>Preencha o campo Senha corretamente</small>
       </div>
+     
 
-      <button id="login" type="submit" disabled>Acessar</button>
+      <div class="">
+
+        <label> Senha: </label>
+        <input id="inputPassword" type="password" minlength="8" required>
+        <small>Preencha o campo senha corretamente.</small>
+
+      </div>
+    
+      
+
+      <button type="submit" id="login" disabled>Acessar</button>
 
     </form>
     <div class="ingressar">
@@ -45,9 +52,9 @@
     </div>
   </div>
 
-  <!-- ---------------------- lógica aplicada no login ----------------------- -->
-  <script src="/scripts/utils.js"></script>
-  <script src="/Front-End-2/Checkpoint 02/ToDo_modelo/scripts/acesso.js"></script>
+ 
+  <script src="scripts/acesso.js" type="module"></script>
+
 </body>
 
 </html>

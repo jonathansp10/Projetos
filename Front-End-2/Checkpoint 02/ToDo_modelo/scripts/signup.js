@@ -1,64 +1,88 @@
-const nomeRef = document.querySelector('#unputNome')
-const sobrenomeRef = document.querySelector('#inputSobrenome')
-const emailRef = document.querySelector('#inputEmail')
-const passwordRef = document.querySelector('#inputPassword')
-const passwordConfirmRef = document.querySelector('#inputPasswordConfirm')
-const loginRef = document.querySelector('#login')
-const rightRef = document.querySelector('.right')
+const inputNameRef = document.querySelector('#inputName');
+const inputSurnameRef = document.querySelector('#inputSurname');
+const inputEmailRef = document.querySelector('#inputEmail');
+const inputPasswordRef = document.querySelector('#inputPassword');
+const inputPasswordRepeatRef = document.querySelector('#inputPasswordRepeat');
+const buttomCreateRef = document.querySelector('#buttonCreate');
+
 
 var formErrors = {
-    nome: true,
-    sobrenome: true,
-    email: true,
-    senha: true,
-    senhaConfirmacao: true
+    inputName: true,
+    inputSurname: true,
+    inputEmail: true,
+    inputPassword: true, 
+    inputPasswordRepeat: true
+    
 }
 
-function checkFormValidity(){
+function checkFormValidity() {
 
     const formErrorsArray = Object.values(formErrors)
+
     const formValidity = formErrorsArray.every(item => item === false)
-    loginRef.disable = !formValidity
+
+    buttomCreateRef.disabled = !formValidity
+
+    
 
 }
 
 function validateInput(inputRef) {
-    
+
     const inputValid = inputRef.checkValidity()
-    const form = inputRef.parentElement
 
-    if(inputValid){
+    const elementFatherRef = inputRef.parentElement
 
-        form.classList.remove('error')
+    if(inputValid) {
+
+        elementFatherRef.classList.remove('error')
 
     } else {
 
-        form.classList.add('error')
+        elementFatherRef.classList.add('error')
 
     }
 
     formErrors[inputRef.id] = !inputValid
 
     checkFormValidity()
+
+    console.log()
+
 }
 
-function load(event){
+function validatePassword(){
+    if(inputPasswordRef.value != inputPasswordRepeatRef.value) {
+        inputPasswordRepeatRef.setCustomValidity('error');
+    } else {
+        inputPasswordRepeatRef.setCustomValidity('');
+    }
+  }
 
-    event.preventDefaut()
+  inputPasswordRef.onchange = validatePassword;
+  inputPasswordRepeatRef.onkeyup = validatePassword;
 
-    loginRef.disable = true
-    rightRef.reset()
 
-    formErrors.nome = true
-    formErrors.sobrenome = true
-    formErrors.senhaConfirmacao = true
-    formErrors.email = true
-    formErrors.senha = true
+function cadastro(event) {
+
+    event.preventDefault()
+
+    console.log()   
+
+    buttomCreateRef.disabled = true
+    buttomCreateRef.reset()
+
+    formErrors.inputEmail = true
+    formErrors.inputPassword =  true  
+    formErrors.inputName= true
+    formErrors.inputPasswordRepeat= true
+    formErrors.inputSurname= true
+
 }
 
-nomeRef.addEventListener('keyup', () => validateInput(nomeRef))
-sobrenomeRef.addEventListener('keyup', () => validateInput(sobrenomeRef))
-emailRef.addEventListener('keyup', () => validateInput(emailRef))
-passwordRef.addEventListener('keyup', () => validateInput(passwordRef))
-passwordConfirmRef.addEventListener(('keyup', () => validateInput(passwordConfirmRef)))
-loginRef.addEventListener('click', (event) => load(event))
+inputNameRef.addEventListener('keyup', () => validateInput(inputNameRef));
+inputSurnameRef.addEventListener('keyup', () => validateInput(inputSurnameRef));
+inputEmailRef.addEventListener('keyup', () => validateInput(inputEmailRef));
+inputPasswordRef.addEventListener('keyup', () => validateInput(inputPasswordRef));
+inputPasswordRepeatRef.addEventListener('keyup', () => validateInput(inputPasswordRepeatRef))
+buttomCreateRef.addEventListener('click', (event) => cadastro(event))

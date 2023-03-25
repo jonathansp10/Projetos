@@ -1,52 +1,64 @@
-const emailRef = document.querySelector('#inputEmail')
-const passwordRef = document.querySelector('#inputPassword')
-const loginRef = document.querySelector('#login')
-const rightRef = document.querySelector('#right')
+const inputEmailRef = document.querySelector('#inputEmail');
+const inputPasswordRef = document.querySelector('#inputPassword');
+const loginRef = document.querySelector('#login');
+
 
 var formErrors = {
-    email: true,
-    senha: true
+    inputEmail: true,
+    inputPassword: true,
+    
 }
 
-function checkFormValidity(){
+function checkFormValidity() {
 
     const formErrorsArray = Object.values(formErrors)
+
     const formValidity = formErrorsArray.every(item => item === false)
-    loginRef.disable = !formValidity
+
+    loginRef.disabled = !formValidity
+
+    
 
 }
 
 function validateInput(inputRef) {
-    
+
     const inputValid = inputRef.checkValidity()
-    const form = inputRef.parentElement
 
-    if(inputValid){
+    const elementFatherRef = inputRef.parentElement
 
-        form.classList.remove('error')
+    if(inputValid) {
+
+        elementFatherRef.classList.remove('error')
 
     } else {
 
-        form.classList.add('error')
+        elementFatherRef.classList.add('error')
 
     }
 
     formErrors[inputRef.id] = !inputValid
 
     checkFormValidity()
+
+    console.log()
+
 }
 
-function load(event){
+function cadastro(event) {
 
-    event.preventDefaut()
+    event.preventDefault()
 
-    loginRef.disable = true
-    rightRef.reset()
+    console.log()   
 
-    formErrors.email = true
-    formErrors.senha = true
+    loginRef.disabled = true
+    loginRef.reset()
+
+    formErrors.inputEmail = true
+    formErrors.inputPassword =  true
+
 }
 
-emailRef.addEventListener('keyup', () => validateInput(emailRef))
-passwordRef.addEventListener('keyup', () => validateInput(passwordRef))
-loginRef.addEventListener('click', (event) => load(event))
+inputEmailRef.addEventListener('keyup', () => validateInput(inputEmailRef)) 
+inputPasswordRef.addEventListener('keyup', () => validateInput(inputPasswordRef))
+loginRef.addEventListener('click', (event) => cadastro(event))
