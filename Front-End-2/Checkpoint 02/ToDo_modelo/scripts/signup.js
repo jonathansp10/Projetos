@@ -50,7 +50,7 @@ function validateInput(inputRef) {
     console.log()
 
 }
-
+// Validação da senha
 function validatePassword(){
     if(inputPasswordRef.value != inputPasswordRepeatRef.value) {
         inputPasswordRepeatRef.setCustomValidity('error');
