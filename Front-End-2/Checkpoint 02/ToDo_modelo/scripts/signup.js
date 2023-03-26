@@ -86,3 +86,51 @@ inputEmailRef.addEventListener('keyup', () => validateInput(inputEmailRef));
 inputPasswordRef.addEventListener('keyup', () => validateInput(inputPasswordRef));
 inputPasswordRepeatRef.addEventListener('keyup', () => validateInput(inputPasswordRepeatRef))
 buttomCreateRef.addEventListener('click', (event) => cadastro(event))
+
+// Parte da requisicao da API
+
+var userData = {
+
+    firstName: 'Luana',
+    lastName: 'Souza',
+    email: 'luana@gmail.com',
+    password: '12345789'
+    
+    }
+    
+    
+    const requestHeaders = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }
+    
+    
+    
+    function register () {
+    
+        var requestConfig = {
+            method: 'POST',
+            headers: requestHeaders,
+            body: JSON.stringify(userData)
+    
+        }
+    
+    
+        fetch('https://todo-api.ctd.academy/v1/users', requestConfig).then(
+            response => { 
+                if(response.ok) {
+        
+                    alert('Você foi cadastrado com sucesso')
+        
+                    window.location.href = './tarefas.html'
+        
+                } else {
+        
+                    alert('O usuário ja foi cadastrado')
+        
+                }
+            }
+        )
+    
+    
+    }
