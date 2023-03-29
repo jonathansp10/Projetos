@@ -57,7 +57,7 @@ function validatePassword(){
     } else {
         inputPasswordRepeatRef.setCustomValidity('');
     }
-  }
+}
 
   inputPasswordRef.onchange = validatePassword;
   inputPasswordRepeatRef.onkeyup = validatePassword;
@@ -79,7 +79,6 @@ function cadastro(event) {
     formErrors.inputSurname= true
 
 }
-
 inputNameRef.addEventListener('keyup', () => validateInput(inputNameRef));
 inputSurnameRef.addEventListener('keyup', () => validateInput(inputSurnameRef));
 inputEmailRef.addEventListener('keyup', () => validateInput(inputEmailRef));
@@ -87,18 +86,9 @@ inputPasswordRef.addEventListener('keyup', () => validateInput(inputPasswordRef)
 inputPasswordRepeatRef.addEventListener('keyup', () => validateInput(inputPasswordRepeatRef))
 buttomCreateRef.addEventListener('click', (event) => cadastro(event))
 
+
 // Parte da requisicao da API
 
-var userData = {
-
-    firstName: 'Luana',
-    lastName: 'Souza',
-    email: 'luana@gmail.com',
-    password: '12345789'
-    
-    }
-    
-    
     const requestHeaders = {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -107,15 +97,34 @@ var userData = {
     
     
     function register () {
-    
+        
+        var userData = {
+
+            firstName: inputNameRef.value,
+            lastName: inputSurnameRef.value,
+            email: inputEmailRef.value,
+            password: inputPasswordRef.value
+        }
+
         var requestConfig = {
             method: 'POST',
             headers: requestHeaders,
             body: JSON.stringify(userData)
     
         }
-    
-    
+        
+        fetch('https://todo-api.ctd.academy/v1/users').then(
+            response => { 
+                response.json().then(
+                    user => {
+                        console.log(user)
+                    }
+                )
+                
+            }
+        )
+
+
         fetch('https://todo-api.ctd.academy/v1/users', requestConfig).then(
             response => { 
                 if(response.ok) {
