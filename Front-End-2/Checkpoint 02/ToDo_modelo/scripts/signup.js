@@ -89,10 +89,6 @@ buttomCreateRef.addEventListener('click', (event) => cadastro(event))
 
 // Parte da requisicao da API
 
-    const requestHeaders = {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    }
     
     
     
@@ -105,6 +101,11 @@ buttomCreateRef.addEventListener('click', (event) => cadastro(event))
             email: inputEmailRef.value,
             password: inputPasswordRef.value
         }
+
+        const requestHeaders = {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }    
 
         var requestConfig = {
             method: 'POST',
