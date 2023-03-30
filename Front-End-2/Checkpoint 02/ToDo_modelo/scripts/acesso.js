@@ -62,3 +62,14 @@ function cadastro(event) {
 inputEmailRef.addEventListener('keyup', () => validateInput(inputEmailRef)) 
 inputPasswordRef.addEventListener('keyup', () => validateInput(inputPasswordRef))
 loginRef.addEventListener('click', (event) => cadastro(event))
+
+//Parte login API
+
+function loginUser (event) {
+
+    event.preventDefault()
+
+    const userLogin = {
+        email:
+    }
+}

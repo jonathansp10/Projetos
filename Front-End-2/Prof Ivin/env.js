@@ -1,0 +1,1 @@
+export const baseUrlAPI = 'https://todo-api.ctd.academy/v1'
