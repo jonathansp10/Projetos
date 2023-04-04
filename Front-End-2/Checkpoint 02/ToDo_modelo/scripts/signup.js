@@ -95,7 +95,6 @@ inputPasswordRepeatRef.addEventListener('keyup', () => validateInput(inputPasswo
     
     
     function register () {
-
         
         var userData = {
 
@@ -103,7 +102,11 @@ inputPasswordRepeatRef.addEventListener('keyup', () => validateInput(inputPasswo
             lastName: inputSurnameRef.value,
             email: inputEmailRef.value,
             password: inputPasswordRef.value
+         
         }
+
+        const userJson = JSON.stringify(userData)
+        localStorage.setItem('userData', userJson)
 
         const requestHeaders = {
             'Accept': 'application/json',
@@ -121,7 +124,7 @@ inputPasswordRepeatRef.addEventListener('keyup', () => validateInput(inputPasswo
         fetch('https://todo-api.ctd.academy/v1/users', requestConfig).then(
             response => { 
                 if(response.ok) {
-        
+
                     alert('Você foi cadastrado com sucesso')
         
                     window.location.href = './index.html'
@@ -134,6 +137,8 @@ inputPasswordRepeatRef.addEventListener('keyup', () => validateInput(inputPasswo
             }
         )
     
-    
     }
+
+   
+
 buttomCreateRef.addEventListener('click', (event) => cadastro(event))
