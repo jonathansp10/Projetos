@@ -68,7 +68,7 @@ inputPasswordRef.addEventListener('keyup', () => validateInput(inputPasswordRef)
 
 function loginUser () {
 
-    const userLogin = {
+    const userData = {
         email: inputEmailRef.value,
         password: inputPasswordRef.value
     }
@@ -78,13 +78,13 @@ function loginUser () {
         'Content-Type': 'application/json'
     } 
     
-    // const registerUser = inputNameRef
-    // localStorage.setItem('fisrtName', registerUser)
+    const userJson = JSON.stringify(userData)
+    localStorage.setItem('userData', userJson)
 
     var requestConfig = {
         method: 'POST',
         headers: requestHeaders,
-        body: JSON.stringify(userLogin)
+        body: JSON.stringify(userData)
 
     }
 
