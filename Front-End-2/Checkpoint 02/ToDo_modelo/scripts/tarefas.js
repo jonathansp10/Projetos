@@ -3,10 +3,30 @@ const nameRef = document.querySelector('#name');
 const buttonCloseAppRef= document.querySelector('#closeApp')
 const user = JSON.parse(localStorage.getItem('userData'))
 
-const requestHeaders = {
-  'Accept': 'application/json',
-  'Content-Type': 'application/json',
-  'Authorization': authToken
+function getUserData() {
+
+  var requestConfig = {
+      method: 'GET',
+      headers: requestHeaders
+  }
+ 
+  fetch(`https://todo-api.ctd.academy/v1/users/getMe`, requestConfig).then(
+      response => {
+          if(response.ok) {
+              
+            getTasks()
+
+          } else {
+              
+              if(response.status === 401) {
+
+                  logout()
+
+              }
+          }
+      }
+  )
+
 }
 
 nameRef.innerText = user.firstName
