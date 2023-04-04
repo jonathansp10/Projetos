@@ -67,15 +67,18 @@ function cadastro(event) {
 
     event.preventDefault()
 
-    console.log()   
+    // console.log()   
 
-    buttomCreateRef.disabled = true
+    // buttomCreateRef.disabled = true
 
-    formErrors.inputEmail = true
-    formErrors.inputPassword =  true  
-    formErrors.inputName= true
-    formErrors.inputPasswordRepeat= true
-    formErrors.inputSurname= true
+    // formErrors.inputEmail = true
+    // formErrors.inputPassword =  true  
+    // formErrors.inputName= true
+    // formErrors.inputPasswordRepeat= true
+    // formErrors.inputSurname= true
+
+    register()
+
 
 }
 inputNameRef.addEventListener('keyup', () => validateInput(inputNameRef));
@@ -83,7 +86,7 @@ inputSurnameRef.addEventListener('keyup', () => validateInput(inputSurnameRef));
 inputEmailRef.addEventListener('keyup', () => validateInput(inputEmailRef));
 inputPasswordRef.addEventListener('keyup', () => validateInput(inputPasswordRef));
 inputPasswordRepeatRef.addEventListener('keyup', () => validateInput(inputPasswordRepeatRef))
-buttomCreateRef.addEventListener('click', (event) => cadastro(event))
+
 
 
 // Parte da requisicao da API
@@ -92,6 +95,7 @@ buttomCreateRef.addEventListener('click', (event) => cadastro(event))
     
     
     function register () {
+
         
         var userData = {
 
@@ -120,7 +124,7 @@ buttomCreateRef.addEventListener('click', (event) => cadastro(event))
         
                     alert('Você foi cadastrado com sucesso')
         
-                    // window.location.href = './tarefas.html'
+                    window.location.href = './index.html'
         
                 } else {
         
@@ -132,3 +136,4 @@ buttomCreateRef.addEventListener('click', (event) => cadastro(event))
     
     
     }
+buttomCreateRef.addEventListener('click', (event) => cadastro(event))

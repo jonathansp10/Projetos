@@ -52,7 +52,6 @@ function cadastro(event) {
     console.log()   
 
     loginRef.disabled = true
-    loginRef.reset()
 
     formErrors.inputEmail = true
     formErrors.inputPassword =  true
@@ -61,7 +60,7 @@ function cadastro(event) {
 
 inputEmailRef.addEventListener('keyup', () => validateInput(inputEmailRef)) 
 inputPasswordRef.addEventListener('keyup', () => validateInput(inputPasswordRef))
-loginRef.addEventListener('click', (event) => cadastro(event))
+
 
 //Parte login API
 
@@ -70,6 +69,38 @@ function loginUser (event) {
     event.preventDefault()
 
     const userLogin = {
-        email:
+        email: inputEmailRef.value,
+        password: inputPasswordRef.value
     }
+
+    const requestHeaders = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }    
+
+    var requestConfig = {
+        method: 'POST',
+        headers: requestHeaders,
+        body: JSON.stringify(userLogin)
+
+    }
+
+    fetch('https://todo-api.ctd.academy/v1/users/login', requestConfig).then(
+        response => {
+            if(response.ok) {
+                response.json().then(
+                    data => {
+                        
+                        localStorage.setItem('authToken', data.jwt)
+                        
+                        window.location.href = "./tarefas.html"
+                    }
+                )
+            } else {
+                alert('O seu usuário ou senha está incorreto')
+            }
+        }
+    )
 }
+
+loginRef.addEventListener('click', (event) => cadastro(event))
