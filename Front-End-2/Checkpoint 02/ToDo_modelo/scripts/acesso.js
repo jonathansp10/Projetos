@@ -51,10 +51,12 @@ function cadastro(event) {
 
     console.log()   
 
-    loginRef.disabled = true
+    // loginRef.disabled = true
 
-    formErrors.inputEmail = true
-    formErrors.inputPassword =  true
+    // formErrors.inputEmail = true
+    // formErrors.inputPassword =  true
+
+    loginUser()
 
 }
 
@@ -64,9 +66,7 @@ inputPasswordRef.addEventListener('keyup', () => validateInput(inputPasswordRef)
 
 //Parte login API
 
-function loginUser (event) {
-
-    event.preventDefault()
+function loginUser () {
 
     const userLogin = {
         email: inputEmailRef.value,
@@ -76,7 +76,10 @@ function loginUser (event) {
     const requestHeaders = {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
-    }    
+    } 
+    
+    // const registerUser = inputNameRef
+    // localStorage.setItem('fisrtName', registerUser)
 
     var requestConfig = {
         method: 'POST',
