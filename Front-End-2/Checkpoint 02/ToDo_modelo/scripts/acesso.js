@@ -77,9 +77,6 @@ function loginUser () {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
     } 
-    
-    const userJson = JSON.stringify(userData)
-    localStorage.setItem('userData', userJson)
 
     var requestConfig = {
         method: 'POST',

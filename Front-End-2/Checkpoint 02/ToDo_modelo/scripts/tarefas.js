@@ -1,7 +1,17 @@
+import { redirectUser } from './signup'
+
 const authToken = localStorage.getItem('authToken')
 const nameRef = document.querySelector('#name');
 const buttonCloseAppRef= document.querySelector('#closeApp')
 const user = JSON.parse(localStorage.getItem('userData'))
+
+
+
+const requestHeaders = {
+  'Accept': 'application/json',
+  'Content-Type': 'application/json',
+  'Authorization': authToken
+}
 
 function getUserData() {
 
@@ -10,10 +20,10 @@ function getUserData() {
       headers: requestHeaders
   }
  
-  fetch(`https://todo-api.ctd.academy/v1/users/getMe`, requestConfig).then(
+fetch(`https://todo-api.ctd.academy/v1/users/getMe`, requestConfig).then(
       response => {
           if(response.ok) {
-              
+            
             getTasks()
 
           } else {
@@ -29,14 +39,28 @@ function getUserData() {
 
 }
 
-nameRef.innerText = user.firstName
-
 function logout() {
 
   window.location.href = './index.html'
-  // localStorage.clear()
+  localStorage.clear()
 
 }
+
+function checkIfAuthTokenExist() {
+
+  if(authToken === null) {
+
+      
+      logout()
+      
+  } else {
+  
+      getUserData()
+
+  }
+
+}
+
 
 
 

@@ -105,8 +105,7 @@ inputPasswordRepeatRef.addEventListener('keyup', () => validateInput(inputPasswo
          
         }
 
-        const userJson = JSON.stringify(userData)
-        localStorage.setItem('userData', userJson)
+       
 
         const requestHeaders = {
             'Accept': 'application/json',
