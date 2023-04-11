@@ -6,7 +6,6 @@ const loginRef = document.querySelector('#login');
 var formErrors = {
     inputEmail: true,
     inputPassword: true,
-    
 }
 
 function checkFormValidity() {
@@ -15,9 +14,7 @@ function checkFormValidity() {
 
     const formValidity = formErrorsArray.every(item => item === false)
 
-    loginRef.disabled = !formValidity
-
-    
+    loginRef.disabled = !formValidity 
 
 }
 
@@ -50,18 +47,9 @@ function cadastro(event) {
     event.preventDefault()
 
     console.log()   
-
-    // loginRef.disabled = true
-
-    // formErrors.inputEmail = true
-    // formErrors.inputPassword =  true
-
     loginUser()
 
 }
-
-inputEmailRef.addEventListener('keyup', () => validateInput(inputEmailRef)) 
-inputPasswordRef.addEventListener('keyup', () => validateInput(inputPasswordRef))
 
 
 //Parte login API
@@ -103,4 +91,9 @@ function loginUser () {
     )
 }
 
-loginRef.addEventListener('click', (event) => cadastro(event))
+
+inputEmailRef.addEventListener('keyup', () => validateInput(inputEmailRef)); 
+inputPasswordRef.addEventListener('keyup', () => validateInput(inputPasswordRef));
+loginRef.addEventListener('click', (event) => cadastro(event));
+
+

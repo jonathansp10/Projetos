@@ -27,7 +27,7 @@ a {
   text-transform: capitalize;
 }
 
-.user-info .user-image {
+.user-info .user-image img {
   height: 2em;
   width: 2em;
   border-radius: 50%;
@@ -73,6 +73,12 @@ a {
 .nova-tarefa input:focus {
   outline: none;
   border-bottom: 1px solid grey;
+}
+
+.nova-tarefa .error{
+  font-weight: lighter !important;
+  color: rgba(220, 20, 60, 0.709) !important;
+  display: flex;
 }
 
 .nova-tarefa input::placeholder {
