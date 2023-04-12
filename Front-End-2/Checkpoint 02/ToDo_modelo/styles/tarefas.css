@@ -96,9 +96,18 @@ a {
   cursor: pointer;
 }
 
-.nova-tarefa button:hover {
-  opacity: 1;
+.nova-tarefa :disabled {
+  height: 2em;
+  width: 2em;
+  background-color: transparent;
+  margin-left: 2em;
+  margin-right: 1em;
+  color: red;
+  opacity: .10;
+  cursor: pointer;
 }
+
+
 
 .nova-tarefa button img {
   height: 100%;
