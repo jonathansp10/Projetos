@@ -13,6 +13,9 @@ function App() {
   if(inputName < 3 && colorName < 6){
     return 'Por favor, preencher corretamente';
   }
+
+  const color = { inputName, colorName };
+  setColorName{[... colorName]}
   
 
 
