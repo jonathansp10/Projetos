@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <title>Placar de Quadribol</title>
+    
 </head>
 <body>
-    <a href="./Front-End-2/Checkpoint 02/ToDo_modelo/index.html">Checkpoint 02</a>
-</body>
-</html>
+    <div class="placar">
+        <h1 class="titulo">Torneio Tribuxo</h1>
+
+        <div class="jogo">
+            <div class="time" id="grifinoria">
+                <span class="nome-time">Grifinória</span>
+                <span class="placar-time" id="placar-grifinoria">0</span>
+                <div class="butao">
+                    <button type="button" class="btn btn-light" onclick="subtrairPontoGrifinoria()">-</button>
+                    <button type="button" class="btn btn-light" onclick="adicionarPontoGrifinoria()">+</button>                    
+                </div>
+            </div>
+
+            <div class="time" id="lufa">
+                <span class="nome-time">Lufa-Lufa</span>
+                <span class="placar-time" id="placar-lufa-lufa">0</span>
+                <div class="butao">
+                    <button type="button" class="btn btn-light" onclick="subtrairPontoLufaLufa()">-</button>
+                    <button type="button" class="btn btn-light" onclick="adicionarPontoLufaLufa()">+</button>                    
+                </div>
+            </div>
+        
+            <div class="time" id="corvinal">
+                <span class="nome-time">Corvinal</span>
+                <span class="placar-time" id="placar-corvinal">0</span>
+                <div class="butao">
+                    <button type="button" class="btn btn-light" onclick="subtrairPontoCorvinal()">-</button>
+                    <button type="button" class="btn btn-light" onclick="adicionarPontoCorvinal()">+</button>                    
+                </div>
+            </div>
+
+            <div class="time" id="sonserina">
+                <span class="nome-time">Sonserina</span>
+                <span class="placar-time" id="placar-sonserina">0</span>
+                <div class="butao">
+                    <button type="button" class="btn btn-light" onclick="subtrairPontoSonserina()">-</button>
+                    <button type="button" class="btn btn-light" onclick="adicionarPontoSonserina()">+</button>                    
+                </div>
+            </div>
+                
+            <script src="./main.js"></script>
+ </body>
