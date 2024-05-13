@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4d5e69cd-ff0a-47f9-8936-114848ed11c6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/CheckMail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Gerenciador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GerenciadorGerencia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MailTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clinica/src/main/java/br/com/digitalhouse/clinica/domain/entity/Contato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clinica/src/main/java/br/com/digitalhouse/clinica/domain/entity/Genero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clinica/src/main/java/br/com/digitalhouse/clinica/domain/entity/Paciente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clinica/src/test/java/br/com/digitalhouse/clinica/domain/entity/PacienteTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2Ux6W3e63CYbyivhiCgys0jNG8u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "last_opened_file_path": "C:/Users/mkfjo/OneDrive/Documentos/Projetos/Backend/apostas"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadeia-mail" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MailTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MailTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d5e69cd-ff0a-47f9-8936-114848ed11c6" name="Changes" comment="" />
+      <created>1693868916126</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1693868916126</updated>
+    </task>
+    <servers />
+  </component>
+</project>

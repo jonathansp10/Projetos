@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.digitalhouse.dentistas.DentistasApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.341 s - in br.com.digitalhouse.dentistas.DentistasApplicationTests
